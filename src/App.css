@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap");
 
 /* font-family: 'Roboto', sans-serif; */
 
@@ -11,7 +11,7 @@
 
 body {
   background: #808080;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper_app .wrapper_title {
@@ -26,74 +26,8 @@ body {
 }
 
 .wrapper_app .container {
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 10px 40px;
-}
-
-.wrapper_app .container .card {
-  background: white;
-  padding: 30px;
-  max-width: 400px;
-}
-
-.wrapper_app .container .card .card_header {
-  display: flex;
-}
-
-.wrapper_app .container .card .card_header .wrapper_avatar {
-  width: 60px;
-  height: 60px;
-  margin-right: 15px;
-}
-
-.wrapper_app .container .card .card_header .wrapper_avatar img {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-}
-
-.wrapper_app .container .card .card_header .wrapper_content {
-  margin-top: 5px;
-}
-
-.wrapper_app .container .card .card_header .wrapper_content strong {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 20px;
-}
-
-.wrapper_app .container .card .card_header .wrapper_content span {
-  color: #808080;
-  font-size: 15px;
-}
-
-.wrapper_app .container .card .card_body {
-  margin: 20px 0;
-}
-
-.wrapper_app .container .card .card_body {
-  color: #808080;
-  font-weight: 600;
-}
-
-.wrapper_app .container .card .card_footer {
-  display: flex;
-}
-
-.wrapper_app .container .card .card_footer button {
-  flex: 1;
-  height: 30px;
-  border-radius: 30px;
-}
-
-.wrapper_app .container .card .card_footer button:first-child {
-  margin-right: 3px;
-  color: rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-}
-
-.wrapper_app .container .card .card_footer button:last-child {
-  margin-left: 3px;
-  color: #da5757;
-  border: 2px solid #da5757;
-  cursor: pointer;
 }
