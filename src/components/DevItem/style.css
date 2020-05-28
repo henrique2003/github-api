@@ -1,8 +1,9 @@
 .card {
   background: white;
+  border-radius: 2px;
   padding: 30px;
-  max-width: 400px;
   margin: 20px;
+  flex: 350px;
 }
 
 .card .card_header {
