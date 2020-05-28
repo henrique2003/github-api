@@ -26,11 +26,12 @@ body {
 .wrapper_app .wrapper_title h1 {
   font-size: 45px;
   text-align: center;
-  color: rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .wrapper_app .row {
   display: flex;
+  flex-direction: row;
 }
 
 .wrapper_app .container {
@@ -82,8 +83,49 @@ body {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wrapper_app .row .wrapper_form form .content button:hover {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  color: #00955e;
+  text-align: center;
+  background: white;
+  border: 1px solid #00955e;
+  transition: all 0.2s ease;
 }
 
 ::-webkit-input-placeholder {
   font-family: "Poppins", sans-serif;
+}
+
+/* Ipad Pró  */
+@media (max-width: 1024px) {
+  .wrapper_app .container {
+    flex: 1;
+  }
+}
+
+/* Ipad */
+@media (max-width: 768px) {
+  .wrapper_app .row {
+    flex-direction: column;
+  }
+
+  .wrapper_app .container {
+    flex: 2;
+    order: 2;
+  }
+
+  .wrapper_app .row .wrapper_form {
+    order: 1;
+  }
+
+  .wrapper_app .row .wrapper_form form {
+    margin: 20px;
+  }
 }
