@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.css'
 
 const DevItem = ({ user, destroyUser, updateUser }) => {
@@ -6,10 +6,18 @@ const DevItem = ({ user, destroyUser, updateUser }) => {
 
   const [disable, setDisable] = useState(true)
   const [formData, setFormData] = useState({
-    name,
-    github_username,
-    bio
+    name: '',
+    github_username: '',
+    bio: ''
   })
+
+  useEffect(() => {
+    setFormData({
+      name,
+      github_username,
+      bio
+    })
+  }, [bio, github_username, name])
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value })
 
