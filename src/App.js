@@ -29,6 +29,23 @@ const App = () => {
     }
   }
 
+  const updateUser = async (id, data) => {
+    try {
+      const res = await api.put(`user/${id}`, data)
+
+      setDevs([devs.map(dev => {
+        if (dev._id === id) {
+          console.log(...dev)
+          return {
+            ...res.data
+          }
+        }
+      })])
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
+
   const onSubmit = async e => {
     try {
       e.preventDefault()
@@ -72,7 +89,7 @@ const App = () => {
         </div>
         <div className="container">
           {devs.length !== 0 ? devs.map((dev, index) => (
-            <DevItem key={index} user={dev} destroyUser={destroyUser} />
+            <DevItem key={index} user={dev} destroyUser={destroyUser} updateUser={updateUser} />
           )) : <p className="alert">Nenhum dev cadastrado no momento!</p>}
         </div>
       </div>
