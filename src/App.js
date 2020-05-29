@@ -59,6 +59,7 @@ const App = () => {
         github_username: newDev
       })
 
+      setNewDev('')
       return setDevs([...devs, res.data])
     } catch (error) {
       setinputError('Dev não encontrado')
