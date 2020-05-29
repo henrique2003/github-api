@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import DevItem from './components/DevItem'
-import axios from 'axios'
+import api from './services/api'
 import './App.css'
 
 const App = () => {
@@ -10,15 +10,13 @@ const App = () => {
     window.scrollTo(0, 0)
 
     async function getDevs() {
-      const res = await axios.get('http://localhost:3001/api/users')
-
-      console.log(res.data)
+      const res = await api.get('http://localhost:3001/api/users')
+      setDevs(res.data)
     }
-
     getDevs()
   }, [])
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault()
   }
 
