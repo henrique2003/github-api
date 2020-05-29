@@ -29,6 +29,7 @@
 .card .card_header .wrapper_content strong {
   color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
+  white-space: nowrap;
 }
 
 .card .card_header .wrapper_content span {
@@ -86,4 +87,24 @@
   color: white;
   background: #da5757;
   transition: all 0.3s ease;
+}
+
+/* Celphone */
+@media (max-width: 428px) {
+  .card .card_header .wrapper_content strong {
+    font-size: 18px;
+  }
+
+  .card .card_header .wrapper_content span {
+    font-size: 14px;
+  }
+
+  .card .card_body p {
+    font-size: 14px;
+  }
+
+  .card .card_footer button {
+    height: 33px;
+    font-size: 15px;
+  }
 }

@@ -129,3 +129,10 @@ body {
     margin: 20px;
   }
 }
+
+/* Celphone */
+@media (max-width: 428px) {
+  .wrapper_app {
+    margin: 0;
+  }
+}
