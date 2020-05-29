@@ -6,6 +6,7 @@ import './App.css'
 const App = () => {
   const [devs, setDevs] = useState([])
   const [newDev, setNewDev] = useState('')
+  const [missingInput, setMissingInput] = useState(false)
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -19,7 +20,17 @@ const App = () => {
   }, [])
 
   const onSubmit = async e => {
-    e.preventDefault()
+    try {
+      e.preventDefault()
+
+      if (!newDev) {
+        return setMissingInput(true)
+      }
+
+      setMissingInput(false)
+    } catch (error) {
+      return console.log(error)
+    }
   }
 
   return (
@@ -32,6 +43,7 @@ const App = () => {
           <form onSubmit={onSubmit}>
             <div className="content">
               <h4>Cadastra usuário:</h4>
+              {missingInput && <p className="missing_param">Campo em branco</p>}
               <input
                 type="text"
                 placeholder="Exemplo: diego3g"
