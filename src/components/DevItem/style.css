@@ -90,6 +90,7 @@
   cursor: pointer;
   color: rgba(0, 0, 0, 0.7);
   border: 2px solid rgba(0, 0, 0, 0.7);
+  background: white;
   transition: all 0.3s ease;
 }
 
