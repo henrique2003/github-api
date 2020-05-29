@@ -22,7 +22,7 @@ const DevItem = ({ user }) => {
         </div>
       </div>
       <div className="card_body">
-        <textarea type="text" value={bio} className="p" disabled={disable} />
+        <input type="text" value={bio} className="p" disabled={disable} />
       </div>
       <div className="card_footer">
         <button onClick={() => setDisable(!disable)}>Editar</button>
