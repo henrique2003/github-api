@@ -6,7 +6,7 @@ import './App.css'
 const App = () => {
   const [devs, setDevs] = useState([])
   const [newDev, setNewDev] = useState('')
-  const [missingInput, setMissingInput] = useState(false)
+  const [inputError, setinputError] = useState('')
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -24,12 +24,18 @@ const App = () => {
       e.preventDefault()
 
       if (!newDev) {
-        return setMissingInput(true)
+        return setinputError('Campo em branco')
       }
 
-      setMissingInput(false)
+      setinputError('')
+      const res = await api.post('user', {
+        github_username: newDev
+      })
+
+      return setDevs([...devs, res.data])
     } catch (error) {
-      return console.log(error)
+      setinputError('Dev não encontrado')
+      return console.log(error.message)
     }
   }
 
@@ -43,7 +49,7 @@ const App = () => {
           <form onSubmit={onSubmit}>
             <div className="content">
               <h4>Cadastra usuário:</h4>
-              {missingInput && <p className="missing_param">Campo em branco</p>}
+              {inputError && <p className="error">{inputError}</p>}
               <input
                 type="text"
                 placeholder="Exemplo: diego3g"

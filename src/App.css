@@ -117,7 +117,7 @@ body {
   margin-top: 25px;
 }
 
-.missing_param {
+.error {
   color: red;
   font-weight: bold;
   margin-top: 15px;
