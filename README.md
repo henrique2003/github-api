@@ -31,4 +31,4 @@ Digite em seu terminal, em um diretório a sua escolha `git clone https://github
 
 ### Como parar a aplicação?
 
-Para parar de rodar o app você pode apertar as teclas `Ctrl + c`.
+Para parar de rodar o app você pode apertar as teclas `Ctrl + c` em seu terminal.
