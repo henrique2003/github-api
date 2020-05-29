@@ -34,7 +34,7 @@ body {
   flex-direction: row;
 }
 
-.wrapper_app .container {
+.wrapper_app .row .container {
   flex: 2;
   order: 1;
   display: flex;
