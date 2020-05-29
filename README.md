@@ -11,13 +11,11 @@
 3. React js<br />
 
 ### O que posso fazer nesta aplicação?
-Nesta aplicação é possível ver e procurar todos os pokemons que o usuário desejar.<br />
-Para fazer é necessário somente: procurar um pokemon de sua escolha dentre os que ja aparecerem na página inicial, ou procurar seu nome ou número da pokedéx na barra de pesquisa.<br />
-Ao apertar no botão de ver mais, o usuário é redirecionado para uma página onde é possível ver mais informações sobre o pokemon. 
+Nesta aplicação é possível realizar um CRUD de usuários a partir do nome se seu github.
 
 ### Instalando o projeto:
 
-Digite em seu terminal, em um diretório a sua escolha `git clone https://github.com/henrique2003/PokeApi.git`<br/>
+Digite em seu terminal, em um diretório a sua escolha `git clone https://github.com/henrique2003/github-api.git`<br/>
 
 ### Rode a app com `yarn start` ou `npm run start`
 
