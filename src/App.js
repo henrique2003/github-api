@@ -31,7 +31,7 @@ const App = () => {
         <div className="container">
           {devs.length !== 0 ? devs.map((dev, index) => (
             <DevItem key={index} user={dev} />
-          )) : <p className="alert">Nenhum dev cadastrado no momento</p>}
+          )) : <p className="alert">Nenhum dev cadastrado no momento!</p>}
         </div>
       </div>
     </div>

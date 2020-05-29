@@ -103,6 +103,15 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.alert {
+  font-size: 25px;
+  color: rgb(195, 20, 20, 0.7);
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
 /* Ipad Pró  */
 @media (max-width: 1024px) {
   .wrapper_app .container {
