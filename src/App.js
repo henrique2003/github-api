@@ -5,13 +5,15 @@ import './App.css'
 
 const App = () => {
   const [devs, setDevs] = useState([])
+  const [newDev, setNewDev] = useState('')
 
   useEffect(() => {
     window.scrollTo(0, 0)
 
     async function getDevs() {
-      const res = await api.get('http://localhost:3001/api/users')
-      setDevs(res.data)
+      const res = await api.get('users')
+
+      return setDevs(res.data)
     }
     getDevs()
   }, [])
@@ -30,7 +32,12 @@ const App = () => {
           <form onSubmit={onSubmit}>
             <div className="content">
               <h4>Cadastra usuário:</h4>
-              <input type="text" placeholder="Exemplo: diego3g" />
+              <input
+                type="text"
+                placeholder="Exemplo: diego3g"
+                value={newDev}
+                onChange={(e) => setNewDev(e.target.value)}
+              />
               <button type="submit">Cadastrar</button>
             </div>
           </form>
