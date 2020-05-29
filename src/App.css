@@ -66,9 +66,11 @@ body {
   width: 100%;
   padding: 7px 13px;
   border-radius: 4px;
+  font-family: "Poppins", sans-serif;
   border: 2px solid rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.7);
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .wrapper_app .row .wrapper_form form .content button {
@@ -101,6 +103,7 @@ body {
 
 ::-webkit-input-placeholder {
   font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 .alert {
