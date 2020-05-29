@@ -3,7 +3,8 @@
   border-radius: 2px;
   padding: 30px;
   margin: 20px;
-  flex: 350px;
+  flex: 1 1 350px;
+  width: 100%;
 }
 
 .card .card_header {
@@ -26,25 +27,39 @@
   margin-top: 5px;
 }
 
-.card .card_header .wrapper_content strong {
+.card .card_header .wrapper_content .strong {
   color: rgba(0, 0, 0, 0.8);
   font-size: 20px;
   white-space: nowrap;
+  width: 100%;
+  border: none;
 }
 
-.card .card_header .wrapper_content span {
+.card .card_header .wrapper_content .span {
   color: #808080;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  border: none;
 }
 
 .card .card_body {
   margin: 20px 0;
 }
 
-.card .card_body p {
+.card .card_body .p:disabled {
+  border: none;
+}
+
+.card .card_body .p {
   color: #808080;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 2px;
+  resize: none;
+  height: 110px;
   line-height: 22px;
   font-size: 16px;
 }
@@ -59,21 +74,27 @@
   border-radius: 30px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+.card .card_footer button:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0) !important;
+  transition: all 0.3s ease;
+}
+
+.card .card_footer button:nth-child(2).d-none {
+  display: none;
   transition: all 0.3s ease;
 }
 
 .card .card_footer button:first-child {
   margin-right: 3px;
-  color: rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(0, 0, 0, 0.7);
   cursor: pointer;
-}
-
-.card .card_footer button:hover:first-child {
-  color: white;
-  background: rgba(0, 0, 0, 0.7);
-  border: 2px solid rgba(0, 0, 0, 0) !important;
-  transition: all 0.3s ease;
 }
 
 .card .card_footer button:last-child {
@@ -89,22 +110,36 @@
   transition: all 0.3s ease;
 }
 
+/* Ipad Pró */
+@media (max-width: 930px) {
+  .card .card_body .p {
+    height: 120px;
+  }
+}
+
 /* Celphone */
 @media (max-width: 428px) {
-  .card .card_header .wrapper_content strong {
+  .card .card_header .wrapper_content .strong {
     font-size: 18px;
   }
 
-  .card .card_header .wrapper_content span {
+  .card .card_header .wrapper_content .span {
     font-size: 14px;
   }
 
-  .card .card_body p {
-    font-size: 14px;
+  .card .card_body .p {
+    font-size: 13px;
+    line-height: 17px;
   }
 
   .card .card_footer button {
     height: 33px;
     font-size: 15px;
+  }
+
+  .card .card_header .wrapper_avatar {
+    width: 60px;
+    height: 45px;
+    margin-right: 15px;
   }
 }
