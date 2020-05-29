@@ -19,6 +19,16 @@ const App = () => {
     getDevs()
   }, [])
 
+  const destroyUser = async (id) => {
+    try {
+      await api.delete(`user/${id}`)
+
+      return setDevs(devs.filter((dev) => dev._id !== id))
+    } catch (error) {
+      return console.error(error.message)
+    }
+  }
+
   const onSubmit = async e => {
     try {
       e.preventDefault()
@@ -62,7 +72,7 @@ const App = () => {
         </div>
         <div className="container">
           {devs.length !== 0 ? devs.map((dev, index) => (
-            <DevItem key={index} user={dev} />
+            <DevItem key={index} user={dev} destroyUser={destroyUser} />
           )) : <p className="alert">Nenhum dev cadastrado no momento!</p>}
         </div>
       </div>

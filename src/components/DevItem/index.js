@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './style.css'
 
-const DevItem = ({ user }) => {
-  const { name, github_username, bio, avatar_url } = user
+const DevItem = ({ user, destroyUser }) => {
+  const { _id, name, github_username, bio, avatar_url } = user
 
   const [disable, setDisable] = useState(true)
 
@@ -27,7 +27,7 @@ const DevItem = ({ user }) => {
       <div className="card_footer">
         <button onClick={() => setDisable(!disable)}>Editar</button>
         <button onClick={onEdit} className={disable ? 'd-none' : ''}>Salvar</button>
-        <button>Apagar</button>
+        <button onClick={() => destroyUser(_id)}>Apagar</button>
       </div>
     </div>
   )
